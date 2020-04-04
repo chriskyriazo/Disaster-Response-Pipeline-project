@@ -89,7 +89,9 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
      2. DisasterResponse.db = Database with cleaned data <br />
      3. categories.csv = categories <br />
      4. messages.csv = messages
-> #### Screenshots = screenshot of the webapp
+> #### Screenshots 
+      
+        Screenshots of the webapp
 
 > #### Models
 
@@ -110,6 +112,6 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 
 ## 7. Acknowledgements
 
-   1.[Udacity](https://udacity.com)
-   2.[Figure-Eight](https://figure-eight.com)
+   1.[Udacity](https://udacity.com) <br />
+   2.[Figure-Eight](https://figure-eight.com) <br />
    3.[Stack Overflow](https://https://stackoverflow.com)
