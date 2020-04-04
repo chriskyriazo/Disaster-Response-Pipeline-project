@@ -11,9 +11,9 @@ def load_data(messages_file_path, categories_file_path):
     Args:
     messages_file_path = str: messages.csv
     categories_file_path = str: categories.csv
-    Returns:
-    merged_df pandas_dataframe: Dataframe obtained from merging the two input\
-    data
+    OUTPUT:
+             Dataframe obtained from merging the two input\
+             data
     """
 
     messages = pd.read_csv(messages_file_path)
@@ -25,12 +25,12 @@ def load_data(messages_file_path, categories_file_path):
 
 def clean_thedata(df):
     """
-    - Cleans the combined dataframe 
+           Cleans the combined dataframe 
     
     Args:
-         Merged dataframe returned from load_data()
-    Returns:
-            Cleaned data 
+           Merged dataframe returned from load_data()
+    OUTPUT:
+           Cleaned data 
     """
 
     # Split categories into separate category columns
@@ -70,11 +70,11 @@ def save_data(df, database_file_name):
     """
     Saves cleaned data to an SQL database
     Args:
-    df pandas_dataframe: Cleaned data returned from clean_data()
-    database_file_name str: File path of SQL Database into which the cleaned\
-    data will be saved
-    Returns:
-            None
+         Cleaned data returned from clean_data()
+         File path of SQL Database into which the cleaned\
+         data will be saved
+    OUTPUT:
+         None
     """
     
     engine = create_engine('sqlite:///{}'.format(database_file_name))
@@ -90,14 +90,14 @@ def main():
 
         messages_filepath, categories_filepath, database_filepath = sys.argv[1:]
 
-        print('Loading data...\n    MESSAGES: {}\n    CATEGORIES: {}'
+        print('Loading data\n    MESSAGES: {}\n    CATEGORIES: {}'
               .format(messages_filepath, categories_filepath))
         df = load_data(messages_filepath, categories_filepath)
 
-        print('Cleaning data...')
+        print('Cleaning data')
         df = clean_thedata(df)
         
-        print('Saving data...\n    DATABASE: {}'.format(database_filepath))
+        print('Saving data\n    DATABASE: {}'.format(database_filepath))
         save_data(df, database_filepath)
         
         print('Cleaned data saved to database you provided')
