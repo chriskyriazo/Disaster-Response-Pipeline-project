@@ -95,7 +95,7 @@ And visit the link: <br />
       
      Screenshots of the webapp
 
-> #### Models
+> #### Model
 
      1. ml.py = the machine learning pipeline
      2. classifier.pkl = the pickle file containing the model
