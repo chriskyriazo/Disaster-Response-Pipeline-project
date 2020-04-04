@@ -82,8 +82,8 @@ And visit the link: <br />
 > #### App
      
      1.run.py = file that runs the app
-     
-     2.templates = go.html and master.html
+     2.templates = go.html and master.html
+
 > #### Data
 
      1. etl.py = the ETL process  
