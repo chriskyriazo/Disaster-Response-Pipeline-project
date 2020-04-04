@@ -4,53 +4,41 @@
 
 In this project,using data provided by [Figure-Eight](https://www.figure-eight.com/) I built a model classifying disaster messages.
 
-_data_ directory contains a data set which are real messages that were sent during disaster events. I will be creating a machine learning pipeline to categorize these events so that appropriate disaster relief agency can be reached out for help.
+I used a data set which are real messages sent during various disasters. In order to categorize these disaster messages i built a machine learning pipeline as well as a web application were you can type a new message and get itsa classification results ( Visualization will also be provided in the web app).
 
-This project will include a web app where an emergency worker can input a new message and get classification results in several categories. The web app will also display visualizations of the data.
 
-[Here](#eg) are a few screenshots of the web app.
+## 2. Project Units
 
-<a id='components'></a>
 
-## 2. Project Components
+> ### 1. ETL Pipeline
 
-There are three components of this project:
+The etl.py file contains data a cleaning pipeline in python that:
 
-<a id='etl_pipeline'></a>
+* Loads the files messages.csv and categories.csv which contains the messages and the categories of them
+* Merges the two datasets 
+* Cleans them
+* Stores the merged dataset in an SQLite database (DisasterResponse.db)
 
-### 2.1. ETL Pipeline
 
-File _data/process_data.py_ contains data cleaning pipeline that:
+> ### 2. ML Pipeline
 
-- Loads the `messages` and `categories` dataset
-- Merges the two datasets
-- Cleans the data
-- Stores it in a **SQLite database**
+the ml.py file contains machine learning pipeline in python that:
 
-<a id='ml_pipeline'></a>
+* Loads data from the database saved by the etl pipeline
+* Splits the data into training and testing sets
+* Builds a text processing and machine learning pipeline
+* Trains a model using GridSearchCV
+* Outputs result on the test set
+* Exports the model as a pickle file (classifier.pkl)
 
-### 2.2. ML Pipeline
 
-File _models/train_classifier.py_ contains machine learning pipeline that:
+> ### 3. Flask Web App
 
-- Loads data from the **SQLite database**
-- Splits the data into training and testing sets
-- Builds a text processing and machine learning pipeline
-- Trains and tunes a model using GridSearchCV
-- Outputs result on the test set
-- Exports the final model as a pickle file
 
-<a id='flask'></a>
-
-### 2.3. Flask Web App
-
-<a id='eg'></a>
-
-Running [this command](#com) **from app directory** will start the web app where users can enter their query, i.e., a request message sent during a natural disaster, e.g. _"Please, we need tents and water. We are in Silo, Thank you!"_.
-
+The web app where users can enter their query
 **_Screenshot 1_**
 
-![master](img/master.jpg)
+![Screenshot1](Screenshots/Screenshot1.jpg)
 
 What the app will do is that it will classify the text message into categories so that appropriate relief agency can be reached out for help.
 
