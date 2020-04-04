@@ -71,7 +71,9 @@ python (the file path to the **ml.py**) (the file path to the **database file** 
 
 
 Go to the app directory and type in: <br />
-run.py 
+**run.py <br />**
+And visit the link: <br />
+**https://0.0.0.0:3001**
 
 
 ## 4. Conclusion
