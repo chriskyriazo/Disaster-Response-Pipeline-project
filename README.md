@@ -81,17 +81,17 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 ## 5. Files
 
 > #### App
-    * run.py = file that runs the app <br />
-    * templates = * go.html
-                * master.html
+     1.run.py = file that runs the app <br />
+     2.templates = go.html and master.html
 > #### Data
-    * etl.py = the ETL process  
-    * DisasterResponse.db = Database with cleaned data
-    * categories.csv = categories
-    * messages.csv = messages
+     1. etl.py = the ETL process  <br />
+     2. DisasterResponse.db = Database with cleaned data <br />
+     3. categories.csv = categories <br />
+     4. messages.csv = messages
 > #### Screenshots = screenshot of the webapp
 > #### Models
-    * ml.py = the machine learning pipeline
+     1. ml.py = the machine learning pipeline
+     2. classifier.pkl = the pickle file containing the model
 
 
 ## 6. Libraries
