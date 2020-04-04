@@ -26,8 +26,8 @@ def load_data(database_filepath):
     """
     Loads data from SQL Database
     Args:
-         database_filepath: SQL database file
-    Returns:
+          SQL database file
+    OUTPUT:
             X:Features dataframe
             Y: Target dataframe
             category_names list: Target labels 
@@ -48,8 +48,8 @@ def tokenize(text):
     Tokenizes text data
     Args:
          Messages as text data
-    Returns:
-            Processed text after normalizing, tokenizing and lemmatizing
+    OUTPUT:
+            Text after normalizing, tokenizing and lemmatizing
     """
     # Normalize text
     text = re.sub(r"[^a-zA-Z0-9]", " ", text.lower())
@@ -71,7 +71,7 @@ def build_model():
     """
     Build model with GridSearchCV
     
-    Returns:
+    OUTPUT:
             Trained model after performing grid search
     """
     # model pipeline
