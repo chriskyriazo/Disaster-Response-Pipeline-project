@@ -44,6 +44,10 @@ The web app where users can enter their query
 ![Screenshot2](Screenshots/Screenshot2.jpg)
 
 
+![Screenshot3](Screenshots/Screenshot3.jpg)
+
+
+
 ## 3. How to run the project
 
 Three steps to start the web app starting the from ETL process.
@@ -81,17 +85,17 @@ As we can see the data is highly imbalanced. Though the accuracy metric is [high
 ## 5. Files
 > #### App
 
-     1.run.py = file that runs the app <br />
+     1.run.py = file that runs the app 
      2.templates = go.html and master.html
 > #### Data
 
-     1. etl.py = the ETL process  <br />
-     2. DisasterResponse.db = Database with cleaned data <br />
-     3. categories.csv = categories <br />
+     1. etl.py = the ETL process  
+     2. DisasterResponse.db = Database with cleaned data 
+     3. categories.csv = categories 
      4. messages.csv = messages
 > #### Screenshots 
       
-        Screenshots of the webapp
+     Screenshots of the webapp
 
 > #### Models
 
