@@ -89,6 +89,7 @@ And visit the link: <br />
      2. DisasterResponse.db = Database with cleaned data 
      3. categories.csv = categories 
      4. messages.csv = messages
+     5. ETL Pipeline Preparation.ipynb = jupyter notebook
 > #### Screenshots 
       
      Screenshots of the webapp
@@ -97,6 +98,7 @@ And visit the link: <br />
 
      1. ml.py = the machine learning pipeline
      2. classifier.pkl = the pickle file containing the model
+     3. ML Pipeline Preparation.ipynb =jupyter notebook
 
 
 ## 6. Libraries
