@@ -33,30 +33,22 @@ df = pd.read_sql_table('DisasterResponse', engine)
 model = joblib.load("classifier.pkl")
 
 
-# index webpage displays cool visuals and receives user input text for model
+# index webpage displays visuals and receives user input text for model
 @app.route('/')
 @app.route('/index')
 def index():
 
-    # extract data needed for visuals
+    # extract data for visuals
     genre_counts = df.groupby('genre').count()['message']
     genre_names = list(genre_counts.index)
 
-    #genre and aid_related status
+    #Category and aid relation
     aid_rel1 = df[df['aid_related']==1].groupby('genre').count()['message']
     aid_rel0 = df[df['aid_related']==0].groupby('genre').count()['message']
     genre_names = list(aid_rel1.index)
 
-    # let's calculate distribution of classes with 1
-    class_distr1 = df.drop(['id', 'message', 'original', 'genre'], axis = 1).sum()/len(df)
-
-    #sorting values in ascending
-    class_distr1 = class_distr1.sort_values(ascending = False)
-
-    #series of values that have 0 in classes
-    class_distr0 = (class_distr1 -1) * -1
-    class_name = list(class_distr1.index)
-
+    category_count = list(df[df.columns[4:]].sum())
+    category_name = df.columns[4:] 
 
     # create visuals
     graphs = [
@@ -87,6 +79,29 @@ def index():
                 'barmode' : 'stack'
             }
         },
+        {
+            'data': [
+                Bar(
+                    x=category_name,
+                    y=category_count, 
+                )
+            ],
+
+            'layout': {
+                'title': 'Number of Target Features',
+                'yaxis': {
+                    'title': "Count"
+                },
+                'xaxis': {
+                    'title': "Features",
+                    'showticklabels':True,
+                    'tickangle':315,
+                }
+                
+            }
+            
+        }
+       
         
     ]
 
