@@ -80,8 +80,9 @@ And visit the link: <br />
 
 ## 5. Files
 > #### App
-
-     1.run.py = file that runs the app 
+     
+     1.run.py = file that runs the app
+     
      2.templates = go.html and master.html
 > #### Data
 
