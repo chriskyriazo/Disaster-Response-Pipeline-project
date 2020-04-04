@@ -44,7 +44,7 @@ The web app where users can enter their query
 ![Screenshot2](Screenshots/Screenshot2.jpg)
 
 
-![Screenshot3](Screenshots/Screenshot3.jpg)
+![Screenshot7](Screenshots/Screenshot7.jpg)
 
 
 
@@ -62,7 +62,7 @@ python (the file path to the **etl.py**) (the file path to the **messages.csv**)
 > ### 2. Training 
 
 Go to the project directory and the type in: <br />
-python (the file path to the **ml.py**) (the file path to the **database file** after the etl) (the file path to the **pickle file** you want to save the model output(classifier.pkl)
+python (the file path to the **ml.py**) (the file path to the **database file** saved after the etl) (the file path to the **pickle file** you want to save the model output(classifier.pkl)
 
 
 
