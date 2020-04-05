@@ -12,7 +12,7 @@ I used a data set which are real messages sent during various disasters. In orde
 
 > ### 1. ETL Pipeline
 
-The etl.py file contains data a cleaning pipeline in python that:
+The etl.py file contains a cleaning pipeline in python that:
 
 * Loads the files messages.csv and categories.csv which contains the messages and the categories of them
 * Merges the two datasets 
